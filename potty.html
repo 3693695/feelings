@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #61dafb;
+            color: #282c34;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 48px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: aurora 3s infinite;
+        }
+        @keyframes aurora {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Name</h1>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="showMessage()">Submit</button>
+        <div class="message" id="message"></div>
+    </div>
+    <div class="footer">Made by Mateen Hassan</div>
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.textContent = 'Mateen loves all its relatives';
+            message.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
